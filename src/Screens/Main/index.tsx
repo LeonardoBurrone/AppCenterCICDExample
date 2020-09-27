@@ -5,7 +5,7 @@ import { Alert, Button, Text, TextInput, View } from 'react-native';
 
 import styles from './styles';
 
-const Test: React.FunctionComponent = () => {
+const Main: React.FunctionComponent = () => {
   const [afterInflation, setAfterInflation] = React.useState<number>(0.0);
   const [amount, setAmount] = React.useState<number>(0.0);
   const [atRiskFree, setAtRiskFree] = React.useState<number>(0.0);
@@ -61,13 +61,13 @@ const Test: React.FunctionComponent = () => {
         onChangeText={(newRiskFreeRate: string) => setRiskFreeRate(Number(newRiskFreeRate))}
       />
       <TextInput
-        placeholder='Amount you want to save'
+        placeholder='Amount you are saving'
         style={styles.textBox}
         keyboardType='decimal-pad'
         onChangeText={(newAmount: string) => setAmount(Number(newAmount))}
       />
       <TextInput
-        placeholder='For how long (in years) will you save?'
+        placeholder='For how long (in years) will you save it?'
         style={styles.textBox}
         keyboardType='decimal-pad'
         onChangeText={(newTimeInYears: string) => setTimeInYears(Number(newTimeInYears))}
@@ -89,4 +89,4 @@ const Test: React.FunctionComponent = () => {
   );
 };
 
-export default Test;
+export default Main;
